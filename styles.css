@@ -258,6 +258,9 @@ h4 {
 
     .color-box {
         transform: translateX(65px);
+        top: 33px;
+        height: 75px;
+        width: 70%;
     }
 
     .menu-icon {
@@ -275,17 +278,20 @@ h4 {
     }
 
     h2 {
-        font-size: 44px;
+        font-size: 40px;
         text-align: center;
     }
 
     h3 {
         text-align: center;
-        font-size: 25px;
+        font-size: 19px;
+        margin: 10px 0;
     }
 
     h4 {
         text-align: center;
+        margin: 13px 0;
+        font-size: 18px;
     }
 
     .buy {
