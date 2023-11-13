@@ -83,7 +83,7 @@ h2 {
 h3 {
     font-size: 30px;
     color: #707070;
-    font-weight: 100;
+    font-weight: 400;
     margin: 20px 0;
 }
 
@@ -226,8 +226,21 @@ h4 {
 
     .row {
         flex-direction: column-reverse;
-        margin-bottom: 70px;
-    margin-top: 37px;
+        margin-bottom: 18px;
+        margin-top: 5px;
+    }
+
+    .column-1 {
+        margin-left: 0px;
+    }
+
+    .column-1::before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
     }
 
     .column-2 {
