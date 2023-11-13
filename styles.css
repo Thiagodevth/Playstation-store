@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: rgb(27, 17, 203);
+    background: linear-gradient(304deg,
+            rgba(27, 17, 203, 1) 15%,
+            rgba(224, 0, 189, 1) 51%,
+            rgba(28, 217, 255, 1) 77%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 80%;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow: hidden;
+    /* ele vai esconder tudo que transbordar, ou seja tudo que ultrapassar ele */
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.img-logo {
+    width: 50px;
+    margin: 30px 0;
+}
+
+nav {
+    width: 100%;
+    text-align: right;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.nav-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: #FB5283;
+    font-size: 14.1px;
+    font-weight: 600;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 70px 0;
+}
+
+.column-1 {
+    margin-left: 50px;
+    position: relative;
+}
+
+h2 {
+    font-size: 54px;
+}
+
+h3 {
+    font-size: 30px;
+    color: #707070;
+    font-weight: 100;
+    margin: 20px 0;
+}
+
+.column-1 p {
+    font-size: 16px;
+    color: #B7B7B7;
+    font-style: 100;
+}
+
+.column-1::before {
+    content: "";
+    width: 10px;
+    height: 57%;
+    position: absolute;
+    left: -40px;
+    top: 8px;
+    background: linear-gradient(304deg,
+            rgba(255, 65, 28, 1) 25%,
+            rgba(17, 27, 203, 1) 72%);
+}
+
+h4 {
+    font-size: 20px;
+    color: #000;
+    margin: 30px 0;
+}
+
+.buy {
+    width: 140px;
+    border: none;
+    padding: 12px 10px;
+    outline: none;
+    color: #FFF;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 2;
+    background: linear-gradient(to right,#fb5283, #ff3527);
+    transition: all 0.5s ease-in-out;
+}
+
+.buy img {
+    width: 30px;
+    display: none;
+}
+
+.buy:hover img {
+    display: block;
+    margin-left: 4px;
+}
+
+.buy:active img {
+    width: 35px;
+} 
+
+.buy:hover {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.column-2 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* o position absolut vai respeitar o absolute, não vai ultrapassar ele*/
+}
+
+.controller {
+    width: 90%;
+    z-index: 2;/* quanto maior o numero mais fica na frente */
+    animation: animationControler 1.5s infinite alternate ease-in-out;
+}
+
+.color-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(#ff54a2, #ff575a);
+    height: 100%;
+    width: 80%;
+    border-radius: 20px 0 0 20px;
+    z-index: 1;
+    /* o z-index define quem vai ficar na frente de quem */
+    transform: translateX(150px);
+}
+
+.add-cart {
+    z-index: 2;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+.add-cart img {
+    height: 100%;
+    width: 100%;
+    max-width: 55px;
+}
+
+.add-cart img:active {
+    height: 50px;
+    width: 50px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links img {
+    height: 24px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 25px;
+    margin-right: 15px;
+    display: none;
+}
+
+   /* ANIMAÇÃO NO CONTROLE  */
+@keyframes animationControler {
+    from {
+        transform: translate(-5%, -5%) rotate(-15deg);
+    }
+}
+
+@media (max-width: 760px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        overflow-y: auto;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+        margin-bottom: 70px;
+    margin-top: 37px;
+    }
+
+    .column-2 {
+        margin-bottom: 25px;
+    }
+
+    #menu-list {
+        position: relative;
+        top: 60px;
+        left: 60px;
+        overflow: hidden;/* quando averflor se passar do tamanho vai esconder*/
+        cursor: pointer;
+        transition: all 0.6s ease-in-out;
+    }
+
+    .color-box {
+        transform: translateX(65px);
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-li {
+        display: block;
+        margin-top: 3px;
+    }
+
+    .column-1 p {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 44px;
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    h4 {
+        text-align: center;
+    }
+
+    .buy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+}
