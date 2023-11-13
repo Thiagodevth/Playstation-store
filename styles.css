@@ -227,7 +227,7 @@ h4 {
     .row {
         flex-direction: column-reverse;
         margin-bottom: 18px;
-        margin-top: 5px;
+        margin-top: 50px;
     }
 
     .column-1 {
@@ -244,7 +244,7 @@ h4 {
     }
 
     .column-2 {
-        margin-bottom: 25px;
+        margin-bottom: 10px;
     }
 
     #menu-list {
@@ -258,9 +258,9 @@ h4 {
 
     .color-box {
         transform: translateX(65px);
-        top: 33px;
-        height: 75px;
-        width: 70%;
+        top: 30px;
+        height: 80%;
+        width: 65%;
     }
 
     .menu-icon {
